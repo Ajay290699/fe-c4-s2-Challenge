@@ -1,0 +1,20 @@
+/* #search{
+    float: right;
+    padding: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 240px;
+    margin-top: -285px;
+    margin-right: 40px;
+}
+#btn{
+    background-color: darkblue;
+    color: white;
+} */
+#search{
+    margin-left: 550px;
+    margin-top: 10px;
+}
+#space{
+    width: 400px;
+}

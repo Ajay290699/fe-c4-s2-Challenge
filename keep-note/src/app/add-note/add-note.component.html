@@ -1,0 +1,80 @@
+<!-- <div id="card">
+    <h3>Add New Note</h3>
+    <div>
+        <input type="text" placeholder="Note Id" [(ngModel)]="addedNote.id" class="input1">
+        <input type="text" placeholder="Note Title" [(ngModel)]="addedNote.title" class="input2">
+    </div>
+    <div>
+        <textarea type="text" cols="46" rows="5" placeholder="Note Content" [(ngModel)]="addedNote.content" class="input3"></textarea>
+    </div>
+    <button (click)="saveNote()">Save</button>
+</div> -->
+<button mat-raised-button color="primary" (click)="show()" id="btn"><mat-icon>add</mat-icon></button>
+
+
+
+    <!-- <div id="card"  *ngIf="flag">
+        <h3>Add New Note</h3>
+        <div>
+            <mat-form-field>
+            <input matInput type="text" placeholder="Note Id" [(ngModel)]="addedNote.id">
+            <input matInput type="text" placeholder="Note Title" [(ngModel)]="addedNote.title">
+            <textarea matInput type="text" cols="46" rows="5" placeholder="Note Content" [(ngModel)]="addedNote.content"></textarea>
+        </mat-form-field>
+        </div>
+        <button (click)="saveNote()">Save</button>
+    </div> -->
+
+<div id="form" *ngIf="flag">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      New Note
+    </mat-expansion-panel-header>
+    <form>
+      <mat-form-field class="field">
+        <mat-label>Note Title</mat-label>
+        <input matInput type="text"  [(ngModel)]="addedNote.title"  name="title" #title="ngModel" required>
+      </mat-form-field><br>
+      <mat-form-field class="field">
+        <mat-label>Note Content</mat-label>
+        <input matInput type="text" [(ngModel)]="addedNote.content" name="content" #content="ngModel" required>
+      </mat-form-field><br>
+      <mat-form-field class="field" appearance="fill">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="addedNote.reminderDate" name="date" #date="ngModel">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field><br>
+      <!-- <mat-form-field>
+        <mat-label>Reminder date</mat-label>
+        <input matInput type="date" [matDatepicker]="picker" [(ngModel)]="addedNote.content" required>  
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field><br> -->
+      <mat-form-field class="field">
+        <mat-label>Add Category</mat-label>
+        <input matInput type="text" [(ngModel)]="addedNote.category" name="category" #category="ngModel" required>   <!--"addedNote.category"--> 
+      </mat-form-field><br>
+      
+      <!-- <mat-form-field class="field"> -->
+        
+        <!-- <mat-radio-group>
+            <mat-radio-button></mat-radio-button>
+        </mat-radio-group> -->
+        <label>Priority</label>
+        <div>        
+          <mat-radio-group [(ngModel)]="addedNote.priority" required name="priority" #priority="ngModel">
+          <mat-radio-button value="Low">Low</mat-radio-button>
+          <mat-radio-button value="Medium">Medium</mat-radio-button>
+          <mat-radio-button value="High">High</mat-radio-button>
+          <mat-radio-button value="Critical">Critical</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <!-- </mat-form-field><br> -->
+      <button mat-icon-button (click)="saveNote()"> <mat-icon fontIcon="save">save</mat-icon> </button>
+    </form>
+  </mat-expansion-panel>
+</div>

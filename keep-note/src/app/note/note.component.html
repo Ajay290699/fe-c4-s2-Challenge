@@ -1,0 +1,29 @@
+<!-- <div id="card">
+    
+    
+</div> -->
+<div id="mydiv">
+    <mat-card class="example-card">
+        <mat-card-header>         
+          <mat-card-title>{{ViewData.title}}</mat-card-title>
+          <span [ngSwitch]="ViewData.priority">
+            <span *ngSwitchCase="'Critical'"><mat-icon color="warn" fontIcon="gpp_maybe">gpp_maybe</mat-icon></span>
+            <span *ngSwitchCase="'High'"><mat-icon color="warn" fontIcon="arrow_circle_up">arrow_circle_up</mat-icon></span>
+            <span *ngSwitchCase="'Low'"><mat-icon color="primary" fontIcon="arrow_circle_down">arrow_circle_down</mat-icon></span>
+            <span *ngSwitchCase="'Medium'"><mat-icon color="primary"  fontIcon="remove_circle_outline">remove_circle_outline</mat-icon></span>
+          </span>
+          <mat-card-subtitle>{{ViewData.reminderDate}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ViewData.content}}</p>
+          <button id="btn">{{ViewData.category}}</button>
+        </mat-card-content>
+        </mat-card>
+<!-- <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+    </mat-expansion-panel-header>
+    <mat-icon color="primary">bookmark</mat-icon>
+    <mat-icon class="icon" color="primary">edit</mat-icon>
+    <mat-icon class="icon" color="primary">delete</mat-icon>
+    <mat-icon class="icon" color="accent">notifications</mat-icon>
+</mat-expansion-panel> -->

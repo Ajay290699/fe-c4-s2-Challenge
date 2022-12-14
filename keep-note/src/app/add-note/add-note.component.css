@@ -1,0 +1,24 @@
+#card{
+    border: 3px solid rgb(178, 154, 239);
+    width: 390px;
+    padding: 5px;
+    padding-left: 40px;
+    margin-left: 600px;
+    border-radius: 5px;
+}
+
+#btn{
+    border-radius: 50%;
+    margin-left: 1400px;
+    margin-top: 200px;
+}
+
+.field{
+    width: 100%;
+}
+
+#form{
+    width: 600px;
+    margin: auto;
+    margin-top: -200px;
+}
